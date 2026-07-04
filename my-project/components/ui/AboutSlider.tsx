@@ -32,10 +32,10 @@ export default function AboutSlider() {
           {active.title}
         </h3>
 
-        <p className="mt-8 min-h-20 max-w-xl text-lg leading-9 text-zinc-400">
+        <p className="mt-8 min-h-65 max-w-xl text-lg leading-9 text-zinc-200">
           {active.text}
         </p>
-        <div className="mt-12 space-y-6">
+        <div className="mt-12 space-y-8">
           {aboutItems.map((item, index) => (
             <button
               key={item.title}
