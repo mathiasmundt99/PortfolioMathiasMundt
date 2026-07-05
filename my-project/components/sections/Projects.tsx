@@ -21,6 +21,7 @@ export default function Projects() {
           description="Live football analysis platform developed with React, Next.js and TypeScript."
           technologies={["React", "Next.js", "TypeScript", "Tailwind"]}
           image="/images/alai_portfolio.webp"
+          comingSoon={false}
         />
 
         <ProjectCard
@@ -29,6 +30,7 @@ export default function Projects() {
           description="An onboarding platform for customers of ModuleX, built with Vue and JavaScript."
           technologies={["Vue", "Nuxt", "GSAP"]}
           image="/images/ModuleX_Portfolio.webp"
+          comingSoon={true}
         />
       </div>
     </section>

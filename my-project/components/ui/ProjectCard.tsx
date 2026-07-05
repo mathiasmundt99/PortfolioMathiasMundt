@@ -7,49 +7,72 @@ type ProjectCardProps = {
   description: string;
   technologies: string[];
   image: string;
+  comingSoon: boolean;
 };
 
 export default function ProjectCard({
-  title,
   slug,
+  title,
   description,
   technologies,
   image,
+  comingSoon,
 }: ProjectCardProps) {
-  return (
-    <Link href={`/projects/${slug}`}>
-      <article className="group overflow-hidden rounded-[28px] border border-zinc-800 bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 hover:border-zinc-700">
-        {/* Image */}
-        <div className="relative aspect-16/10 overflow-hidden bg-zinc-800">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+  const card = (
+    <article
+      className={`group overflow-hidden rounded-[28px] border border-zinc-800 bg-zinc-900/60 transition-all duration-500 ${
+        comingSoon
+          ? "cursor-not-allowed opacity-80"
+          : "hover:-translate-y-2 hover:border-zinc-700"
+      }`}
+    >
+      {/* Image */}
+      <div className="relative aspect-16/10 overflow-hidden bg-zinc-800">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
+          className={`object-cover transition-transform duration-700 ${
+            comingSoon ? "" : "group-hover:scale-105"
+          }`}
+        />
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-linear-to-t from-zinc-950/20 via-transparent to-transparent" />
-        </div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-linear-to-t from-zinc-950/20 via-transparent to-transparent" />
 
-        {/* Content */}
-        <div className="p-8">
-          <div className="flex items-center justify-between">
-            <h3 className="text-3xl font-semibold tracking-tight">{title}</h3>
+        {/* Coming Soon badge */}
+        {comingSoon && (
+          <div className="absolute right-4 top-4 rounded-full border border-zinc-700 bg-zinc-900/80 px-4 py-2 text-xs font-medium uppercase tracking-wider text-zinc-300 backdrop-blur-md">
+            Coming Soon
+          </div>
+        )}
+      </div>
 
+      {/* Content */}
+      <div className="p-8">
+        <div className="flex items-center justify-between">
+          <h3 className="text-3xl font-semibold tracking-tight">{title}</h3>
+
+          {!comingSoon && (
             <span className="translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
               ↗
             </span>
-          </div>
-
-          <p className="mt-5 leading-7 text-zinc-400">{description}</p>
-
-          <p className="mt-8 text-sm tracking-wide text-zinc-500">
-            {technologies.join(" · ")}
-          </p>
+          )}
         </div>
-      </article>
-    </Link>
+
+        <p className="mt-5 leading-7 text-zinc-400">{description}</p>
+
+        <p className="mt-8 text-sm tracking-wide text-zinc-500">
+          {technologies.join(" · ")}
+        </p>
+      </div>
+    </article>
   );
+
+  if (comingSoon) {
+    return card;
+  }
+
+  return <Link href={`/projects/${slug}`}>{card}</Link>;
 }

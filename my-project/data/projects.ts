@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   subtitle: string;
   description: string;
+  comingSoon: boolean;
 
   overview: {
     heading: string;
@@ -40,6 +41,7 @@ export const projects: Project[] = [
     subtitle: "Modern weather application with animations and favourites.",
     description:
       "A modern weather application built with Vue, Nuxt and GSAP, focusing on smooth animations and an intuitive user experience.",
+      comingSoon: true,
 
     overview: {
       heading: "Making weather information feel simple and engaging.",
@@ -101,6 +103,7 @@ export const projects: Project[] = [
       "Live football analytics platform currently being used in the World Cup",
     description:
       "Live football analytics platform built with React, Next.js and TypeScript. Focused on data visualization, dashboards and modern UX.",
+      comingSoon: false,
 
     overview: {
       heading: "Helping football clubs make better decisions through data.",
