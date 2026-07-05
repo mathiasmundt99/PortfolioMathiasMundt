@@ -40,11 +40,17 @@ export default function Hero() {
 
       {/* Buttons */}
       <div className="mt-12 flex flex-col gap-12 sm:flex-row">
-        <button className="rounded-full bg-blue-500 px-8 py-4 font-semibold transition hover:bg-blue-600">
+        <button
+          className="rounded-full bg-blue-500 px-8 py-4 font-semibold transition hover:bg-blue-600"
+          aria-label="Scroll to projects section"
+        >
           View Projects
         </button>
 
-        <button className="rounded-full border border-zinc-700 bg-zinc-900 px-8 py-4 font-semibold transition hover:bg-zinc-800">
+        <button
+          className="rounded-full border border-zinc-700 bg-zinc-900 px-8 py-4 font-semibold transition hover:bg-zinc-800"
+          aria-label="Scroll to contact section"
+        >
           Contact Me
         </button>
       </div>

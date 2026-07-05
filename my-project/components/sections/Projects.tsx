@@ -17,6 +17,7 @@ export default function Projects() {
       <div className="mt-20 grid gap-10 lg:grid-cols-2">
         <ProjectCard
           title="Alai"
+          slug="alai"
           description="Live football analysis platform developed with React, Next.js and TypeScript."
           technologies={["React", "Next.js", "TypeScript", "Tailwind"]}
           image="/images/alai_portfolio.webp"
@@ -24,7 +25,8 @@ export default function Projects() {
 
         <ProjectCard
           title="ModuleX"
-          description="An onboarding platform for customers of ModuleX, built with Vue, JavaScript and in cooperation with the backend team."
+          slug="modulex"
+          description="An onboarding platform for customers of ModuleX, built with Vue and JavaScript."
           technologies={["Vue", "Nuxt", "GSAP"]}
           image="/images/ModuleX_Portfolio.webp"
         />

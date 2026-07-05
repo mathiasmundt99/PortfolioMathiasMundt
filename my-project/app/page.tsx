@@ -1,8 +1,9 @@
-import Navbar from "@/components/layoutMappe/Navbar";
+import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
 import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <About />
+      <Contact />
     </main>
   );
 }

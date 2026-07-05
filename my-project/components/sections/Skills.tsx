@@ -24,8 +24,8 @@ export default function Skills() {
             "React",
             "Next.js",
             "TypeScript",
+            "JavaScript",
             "Tailwind CSS",
-            "Astro",
             "Vue",
           ]}
         />
@@ -37,7 +37,7 @@ export default function Skills() {
 
         <SkillCard
           title="Tools"
-          skills={["Git", "Figma", "Vercel", "Postman", "VS Code", "GitHub"]}
+          skills={["GitHub", "Figma", "Vercel", "VS Code", "Git", "Swagger"]}
         />
       </div>
     </section>

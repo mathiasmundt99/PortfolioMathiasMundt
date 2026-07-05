@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import { aboutItems } from "@/components/data/aboutItems";
+import { aboutItems } from "@/data/aboutItems";
 
 export default function AboutSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,7 +20,8 @@ export default function AboutSlider() {
             src={active.image}
             alt={active.title}
             fill
-            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </div>
       </div>
@@ -38,6 +39,7 @@ export default function AboutSlider() {
         <div className="mt-12 space-y-8">
           {aboutItems.map((item, index) => (
             <button
+              aria-label={`Show ${item.title} information`}
               key={item.title}
               onClick={() => setActiveIndex(index)}
               className={`flex w-fit items-center border-l-2 py-3 pl-5 pr-8 text-left transition-all duration-300 ${

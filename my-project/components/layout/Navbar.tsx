@@ -12,7 +12,6 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/50 bg-zinc-950/70 backdrop-blur-xl">
       <div className="grid h-20 grid-cols-3 items-center px-6 md:px-10 lg:px-16">
-        {/* Left */}
         <div>
           <Link
             href="/"
@@ -22,7 +21,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Center */}
         <nav className="hidden justify-center gap-10 md:flex">
           {navigation.map((item) => (
             <Link
@@ -35,7 +33,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right */}
         <div className="flex justify-end items-center gap-4">
           <button className="rounded-full p-2 text-zinc-400 transition hover:bg-zinc-800 hover:text-white">
             <Moon size={18} />
