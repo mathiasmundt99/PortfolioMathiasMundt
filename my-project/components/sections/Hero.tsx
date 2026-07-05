@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Mouse, ChevronDown } from "lucide-react";
+import { scrollToSection } from "@/components/utils/scrollToSection";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center md:px-12">
+    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center md:px-12">
       {/* Badge */}
       <div className="mb-8 rounded-full border border-zinc-800 bg-zinc-900/80 px-5 py-2">
         <span className="flex items-center gap-2 text-sm text-zinc-300">
@@ -41,25 +42,48 @@ export default function Hero() {
 
       {/* Buttons */}
       <div className="mt-12 flex flex-col gap-12 sm:flex-row">
-        <Link
-          href="#work"
+        <button
+          onClick={() => scrollToSection("work")}
           className="rounded-full bg-blue-500 px-8 py-4 font-semibold transition hover:bg-blue-600"
           aria-label="Scroll to projects section"
         >
           View Projects
-        </Link>
+        </button>
 
-        <Link
-          href="#contact"
+        <button
+          onClick={() => scrollToSection("contact")}
           className="rounded-full border border-zinc-700 bg-zinc-900 px-8 py-4 font-semibold transition hover:bg-zinc-800"
           aria-label="Scroll to contact section"
         >
           Contact Me
-        </Link>
+        </button>
       </div>
 
-      {/* Scroll */}
-      <div className="absolute bottom-12 text-zinc-500">↓</div>
+      {/* Scroll Indicator */}
+      <button
+        onClick={() => scrollToSection("work")}
+        aria-label="Scroll to projects"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2"
+      >
+        <div className="flex flex-col items-center gap-1 rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-3 backdrop-blur-md transition-all duration-300 hover:border-zinc-700 hover:bg-zinc-900/80">
+          <Mouse size={18} strokeWidth={1.75} className="text-zinc-400" />
+
+          <motion.div
+            animate={{ y: [0, 4, 0] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <ChevronDown
+              size={18}
+              strokeWidth={1.75}
+              className="text-zinc-400"
+            />
+          </motion.div>
+        </div>
+      </button>
     </section>
   );
 }

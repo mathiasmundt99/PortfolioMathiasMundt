@@ -7,7 +7,7 @@ export const aboutItems = [
     {
     title: "Football",
     image: "/images/fodbold.JPEG",
-    text: "Im currently playing football with my boys in a local team called Aalborg Chang, where i also happen to be the coach of the team, which means that i get to play every match as well! We are currently playing in the lowest division, and most of the guys are properbly just playing for the beers after the match, but we are still having a lot of fun and enjoying the game. I have been playing football since i was a kid, and it has always been a big part of my life, and im glad that it still is.",
+    text: "I am currently playing football with my boys in a local team called Aalborg Chang, where i also happen to be the coach of the team, which means that i get to play every match as well! We are currently playing in the lowest division, and most of the guys are properbly just playing for the beers after the match, but we are still having a lot of fun and enjoying the game. I have been playing football since i was a kid, and it has always been a big part of my life, and i am glad that it still is.",
   },
   {
     title: "Enjoying Nature",
