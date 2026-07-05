@@ -3,6 +3,9 @@ import { projects } from "@/data/projects";
 
 import BackButton from "@/components/project/BackButton";
 import ProjectHero from "@/components/project/ProjectHero";
+import ProjectOverview from "@/components/project/ProjectOverview";
+import ProjectSection from "@/components/project/ProjectSection";
+import ProjectTakeaways from "@/components/project/ProjectTakeaways";
 
 type Props = {
   params: Promise<{
@@ -14,9 +17,6 @@ export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
 
   const project = projects.find((p) => p.slug === slug);
-  console.log("Slug:", slug);
-  console.log("Projects:", projects);
-  console.log("Found project:", project);
 
   if (!project) {
     notFound();
@@ -32,9 +32,17 @@ export default async function ProjectPage({ params }: Props) {
         <ProjectHero
           title={project.title}
           subtitle={project.subtitle}
-          image={project.image}
+          image={project.images.hero}
           technologies={project.technologies}
         />
+
+        <ProjectOverview project={project} />
+
+        {project.sections.map((section) => (
+          <ProjectSection key={section.title} section={section} />
+        ))}
+
+        <ProjectTakeaways project={project} />
       </div>
     </main>
   );
