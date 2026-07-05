@@ -43,6 +43,7 @@ export default async function ProjectPage({ params }: Props) {
         ))}
 
         <ProjectTakeaways project={project} />
+        {/*<BackButton />*/}
       </div>
     </main>
   );

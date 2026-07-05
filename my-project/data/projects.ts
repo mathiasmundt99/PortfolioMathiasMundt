@@ -104,7 +104,7 @@ export const projects: Project[] = [
 
     overview: {
       heading: "Helping football clubs make better decisions through data.",
-      text: "",
+      text: "During my time at Alai, I worked on building a live football analytics platform that is currently being used in the World Cup to provide real-time insights to football clubs such as the Portugese National Team. My work focused on building modern dashboards, interactive graphs and reusable components to visualize performance data in real time.",
     },
 
     metadata: [
