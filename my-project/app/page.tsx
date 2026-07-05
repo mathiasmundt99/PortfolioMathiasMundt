@@ -7,7 +7,13 @@ import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen  bg-zinc-950 text-white">
+    <main
+      className="min-h-screen"
+      style={{
+        backgroundColor: "var(--background)",
+        color: "var(--foreground)",
+      }}
+    >
       <Navbar />
       <Hero />
       <Projects />
