@@ -2,14 +2,14 @@ import ProjectCard from "../ui/ProjectCard";
 
 export default function Projects() {
   return (
-    <section id="work" className="px-6 py-32 md:px-10 lg:px-16">
-      <p className="text-blue-500">Selected Work</p>
+    <section id="work" className="scroll-mt-24 px-6 py-32 md:px-10 lg:px-16">
+      <p className="text-primary">Selected Work</p>
 
-      <h2 className="mt-3 text-5xl font-bold">
+      <h2 className="mt-3 text-5xl font-bold tracking-tight text-foreground">
         Projects I've enjoyed building.
       </h2>
 
-      <p className="mt-6 max-w-2xl text-zinc-400">
+      <p className="mt-6 max-w-2xl text-muted">
         A selection of projects ranging from frontend applications to UX-focused
         experiences and full-stack solutions.
       </p>

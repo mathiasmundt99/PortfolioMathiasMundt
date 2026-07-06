@@ -2,16 +2,16 @@ import SkillCard from "../ui/SkillCard";
 
 export default function Skills() {
   return (
-    <section id="skills" className="px-6 py-32 md:px-10 lg:px-16">
-      <p className="text-sm font-medium uppercase tracking-[0.3em] text-blue-500">
+    <section id="skills" className="scroll-mt-24 px-6 py-32 md:px-10 lg:px-16">
+      <p className="text-sm font-medium uppercase tracking-[0.3em] text-primary">
         Toolkit
       </p>
 
-      <h2 className="mt-4 text-5xl font-bold tracking-tight">
+      <h2 className="mt-4 text-5xl font-bold tracking-tight text-foreground">
         Technologies I enjoy working with.
       </h2>
 
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+      <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
         I enjoy building modern, performant and accessible web applications
         using technologies that prioritize developer experience and user
         experience.
